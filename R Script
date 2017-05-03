@@ -1,0 +1,21 @@
+tb <- data.frame(idx = 1:20, cl = rnorm(20, mean = 4, 2))
+
+design <- read.table("design_test.csv", header = T, sep = ",")
+
+
+
+start_count <- 1
+counter <- 1
+
+end_count <- design$idx[counter]
+all_count <- nrow(design)
+
+while(counter <= all_count){
+  tb$week[start_count:end_count] <- design$week[counter]
+  tb$week_day[start_count:end_count] <- design$week_day[counter]
+  
+  counter <- counter + 1
+  start_count <- end_count + 1
+
+  end_count <- design$idx[counter]
+}
