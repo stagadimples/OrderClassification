@@ -72,3 +72,8 @@ FROM
 GROUP BY
 	BASE.SalesOrderID
 )NEW;
+
+
+/*
+	This is just a test comment
+*/
