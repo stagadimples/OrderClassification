@@ -5,11 +5,16 @@
 # author: isaac adjei-attah
 ###################################################################################################
 
-
 setwd("e:/projects/")
 
 dir.create("host_import")
 setwd("host_import")
+
+
+# load required libraries
+#########################################################
+
+library(dplyr); library(sqldf)
 
 # create a test file to motivate algorithm
 #########################################################
